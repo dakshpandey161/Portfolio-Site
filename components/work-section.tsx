@@ -10,23 +10,28 @@ gsap.registerPlugin(ScrollTrigger)
 
 const experiments = [
   {
-    medium: "System Analysis",
-    description: "A production-grade backend system that continuously crawls websites, analyzes UI and text for deceptive patterns, and evolves its detection logic over time through persistent learning.",
+    title: "System Analysis",
+    medium: "Automated Pipeline",
+    description:
+      "A production-grade backend system that continuously crawls websites, analyzes UI and text for deceptive patterns, and evolves its detection logic through persistent learning.",
     span: "col-span-2 row-span-2",
   },
   {
     title: "Signal Field",
     medium: "Agent Orchestration",
-    description: "An orchestration layer that coordinates autonomous crawling and analysis agents, enabling unattended execution, pattern reuse, and scalable detection workflows.",
+    description:
+      "Coordinates autonomous crawling and analysis agents to enable unattended execution, scalable workflows, and reuse of learned detection patterns.",
+    span: "col-span-1 row-span-1",
   },
   {
     title: "Silent Agent",
     medium: "Visual System",
-    description: "A minimal, non-intrusive interface layer designed to surface system insights without interrupting user flow or operational context.",
+    description:
+      "A minimal interface layer that surfaces system output without interrupting user flow or operational context.",
     span: "col-span-1 row-span-2",
   },
-  
 ]
+
 
 export function WorkSection() {
   const sectionRef = useRef<HTMLElement>(null)
