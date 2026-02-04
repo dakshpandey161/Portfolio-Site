@@ -3,47 +3,29 @@
 import { useState, useRef, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import gsap from "gsap"
+import cloudImage from "./cloud.png";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const experiments = [
   {
-    title: "Project Lattice",
-    medium: "Interface Study",
-    description: "Structural framework for adaptive layouts in dynamic content systems.",
+    medium: "System Analysis",
+    description: "A production-grade backend system that continuously crawls websites, analyzes UI and text for deceptive patterns, and evolves its detection logic over time through persistent learning.",
     span: "col-span-2 row-span-2",
   },
   {
     title: "Signal Field",
     medium: "Agent Orchestration",
-    description: "Autonomous coordination layer for multi-agent environments.",
-    span: "col-span-1 row-span-1",
+    description: "An orchestration layer that coordinates autonomous crawling and analysis agents, enabling unattended execution, pattern reuse, and scalable detection workflows.",
   },
   {
     title: "Silent Agent",
     medium: "Visual System",
-    description: "Non-intrusive interface patterns for ambient computing.",
+    description: "A minimal, non-intrusive interface layer designed to surface system insights without interrupting user flow or operational context.",
     span: "col-span-1 row-span-2",
   },
-  {
-    title: "Noir Grid",
-    medium: "Typography",
-    description: "High-contrast typographic system for editorial interfaces.",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    title: "Echo Chamber",
-    medium: "Audio-Visual",
-    description: "Generative soundscapes mapped to interface interactions.",
-    span: "col-span-2 row-span-1",
-  },
-  {
-    title: "Void Protocol",
-    medium: "Experimental",
-    description: "Negative space as primary interaction medium.",
-    span: "col-span-1 row-span-1",
-  },
+  
 ]
 
 export function WorkSection() {
@@ -99,10 +81,10 @@ export function WorkSection() {
       <div ref={headerRef} className="mb-16 flex items-end justify-between">
         <div>
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Experiments</span>
-          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">SELECTED WORK</h2>
+          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">Dark Pattern Detection System</h2>
         </div>
         <p className="hidden md:block max-w-xs font-mono text-xs text-muted-foreground text-right leading-relaxed">
-          Studies across interface design, agent systems, and visual computation.
+          Automated software system for crawling websites and detecting deceptive UI and text patterns at scale.Designed as a background service with modular detection logic, persistent learning, and cloud-based execution.
         </p>
       </div>
 
@@ -155,70 +137,98 @@ function WorkCard({
 
   return (
     <article
-      ref={cardRef}
+  ref={cardRef}
+  className={cn(
+    "group relative border border-border/40 p-5 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden",
+    experiment.span,
+    isActive && "border-accent/60",
+  )}
+
+>
+  {/* Accent background layer */}
+  <div
+    className={cn(
+      "absolute inset-0 bg-accent/5 transition-opacity duration-500",
+      isActive ? "opacity-100" : "opacity-100",
+    )}
+  />
+
+  {/* Background image layer */}
+  <div
+    className={cn(
+      "absolute inset-0 transition-opacity duration-500",
+      isActive ? "opacity-100" : "opacity-0",
+    )}
+  >
+   <div className="mt-10 max-w-5xl">
+  <div className="relative aspect-[16/9] overflow-hidden border border-border/40">
+    <img
+      src={cloudImage.src}
+      alt="System observability"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
+
+  </div>
+
+  {/* Image dark overlay */}
+  <div
+    className={cn(
+      "absolute inset-0 bg-black/60 transition-opacity duration-500",
+      isActive ? "opacity-0" : "opacity-0",
+    )}
+  />
+
+  {/* Content */}
+  <div className="relative z-10">
+    <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+      {experiment.medium}
+    </span>
+
+    <h3
       className={cn(
-        "group relative border border-border/40 p-5 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden",
-        experiment.span,
-        isActive && "border-accent/60",
+        "mt-3 font-[var(--font-bebas)] text-2xl md:text-4xl tracking-tight transition-colors duration-300",
+        isActive ? "text-accent" : "text-foreground",
       )}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Background layer */}
-      <div
-        className={cn(
-          "absolute inset-0 bg-accent/5 transition-opacity duration-500",
-          isActive ? "opacity-100" : "opacity-0",
-        )}
-      />
+      {experiment.title}
+    </h3>
+  </div>
 
-      {/* Content */}
-      <div className="relative z-10">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-          {experiment.medium}
-        </span>
-        <h3
-          className={cn(
-            "mt-3 font-[var(--font-bebas)] text-2xl md:text-4xl tracking-tight transition-colors duration-300",
-            isActive ? "text-accent" : "text-foreground",
-          )}
-        >
-          {experiment.title}
-        </h3>
-      </div>
+  {/* Description (reveals on hover) */}
+  <div className="relative z-10">
+    <p
+      className={cn(
+        "font-mono text-xs text-muted-foreground leading-relaxed transition-all duration-500 max-w-[280px]",
+        isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2",
+      )}
+    >
+      {experiment.description}
+    </p>
+  </div>
 
-      {/* Description - reveals on hover */}
-      <div className="relative z-10">
-        <p
-          className={cn(
-            "font-mono text-xs text-muted-foreground leading-relaxed transition-all duration-500 max-w-[280px]",
-            isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2",
-          )}
-        >
-          {experiment.description}
-        </p>
-      </div>
+  {/* Index marker */}
+  <span
+    className={cn(
+      "absolute bottom-4 right-4 font-mono text-[10px] transition-colors duration-300",
+      isActive ? "text-accent" : "text-muted-foreground/40",
+    )}
+  >
+    {String(index + 1).padStart(2, "0")}
+  </span>
 
-      {/* Index marker */}
-      <span
-        className={cn(
-          "absolute bottom-4 right-4 font-mono text-[10px] transition-colors duration-300",
-          isActive ? "text-accent" : "text-muted-foreground/40",
-        )}
-      >
-        {String(index + 1).padStart(2, "0")}
-      </span>
+  {/* Corner accent lines */}
+  <div
+    className={cn(
+      "absolute top-0 right-0 w-12 h-12 transition-opacity duration-500",
+      isActive ? "opacity-100" : "opacity-0",
+    )}
+  >
+    <div className="absolute top-0 right-0 w-full h-[1px] bg-accent" />
+    <div className="absolute top-0 right-0 w-[1px] h-full bg-accent" />
+  </div>
+</article>
 
-      {/* Corner line */}
-      <div
-        className={cn(
-          "absolute top-0 right-0 w-12 h-12 transition-all duration-500",
-          isActive ? "opacity-100" : "opacity-0",
-        )}
-      >
-        <div className="absolute top-0 right-0 w-full h-[1px] bg-accent" />
-        <div className="absolute top-0 right-0 w-[1px] h-full bg-accent" />
-      </div>
-    </article>
   )
 }
