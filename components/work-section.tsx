@@ -12,8 +12,8 @@ const experiments = [
   {
     title: "System Analysis",
     medium: "Automated Pipeline",
-    description:
-      "A production-grade backend system that continuously crawls websites, analyzes UI and text for deceptive patterns, and evolves its detection logic through persistent learning.",
+    // description:
+    //   "A production-grade backend system that continuously crawls websites, analyzes UI and text for deceptive patterns, and evolves its detection logic through persistent learning.",
     span: "col-span-2 row-span-2",
   },
   {

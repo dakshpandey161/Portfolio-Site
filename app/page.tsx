@@ -11,7 +11,8 @@ export default function Page() {
       <SideNav />
       <div className="grid-bg fixed inset-0 opacity-30" aria-hidden="true" />
 
-      <div className="relative z-10">
+      {/* Content offset to account for SideNav */}
+      <div className="relative z-10 pl-16 md:pl-20">
         <HeroSection />
         <SignalsSection />
         <WorkSection />
@@ -21,3 +22,4 @@ export default function Page() {
     </main>
   )
 }
+
