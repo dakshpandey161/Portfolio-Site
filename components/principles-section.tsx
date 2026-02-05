@@ -16,37 +16,37 @@ export function PrinciplesSection() {
     {
       number: "01",
       titleParts: [
-        { text: "Interface", highlight: true },
-        { text: " MINIMALISM", highlight: false },
+        { text: "AUTONOMOUS", highlight: true },
+        { text: " AGENTS", highlight: false },
       ],
-      description: "Reduce until only the essential remains. Every element earns its place.",
+      description: "Independent crawlers execute without supervision, adapting to live environments in real time.",
       align: "left",
     },
     {
       number: "02",
       titleParts: [
-        { text: "SYSTEMS", highlight: true },
-        { text: " OVER SCREENS", highlight: false },
+        { text: "SCALABLE", highlight: true },
+        { text: " DETECTION", highlight: false },
       ],
-      description: "Design behaviors, not just layouts. Build logic that scales.",
+      description: "The system expands coverage without increasing complexity or operational overhead.",
       align: "right",
     },
     {
       number: "03",
       titleParts: [
-        { text: "CONTROLLED ", highlight: false },
-        { text: "TENSION", highlight: true },
+        { text: "PATTERN ", highlight: false },
+        { text: "MEMORY", highlight: true },
       ],
-      description: "Balance between restraint and expression. Confidence without excess.",
+      description: "Confirmed dark patterns are stored and reused, eliminating redundant analysis over time.",
       align: "left",
     },
     {
       number: "04",
       titleParts: [
-        { text: "SIGNAL ", highlight: false },
-        { text: "CLARITY", highlight: true },
+        { text: "FEEDBACK ", highlight: false },
+        { text: "LOOPS", highlight: true },
       ],
-      description: "Communication that cuts through noise. Precision in every interaction.",
+      description: "Each detection cycle refines future classification accuracy and response speed.",
       align: "right",
     },
   ]
