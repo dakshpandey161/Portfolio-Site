@@ -16,22 +16,21 @@ const experiments = [
     //   "A production-grade backend system that continuously crawls websites, analyzes UI and text for deceptive patterns, and evolves its detection logic through persistent learning.",
     span: "col-span-2 row-span-2",
   },
-  {
-    title: "Signal Field",
-    medium: "Agent Orchestration",
+   {
+    title: "Cognitive Mesh",
+    medium: "A distributed analysis layer that orchestrates autonomous crawlers and detection agents. It continuously interprets behavioral signals, identifies emerging dark patterns.",
     description:
       "Coordinates autonomous crawling and analysis agents to enable unattended execution, scalable workflows, and reuse of learned detection patterns.",
     span: "col-span-1 row-span-1",
   },
   {
-    title: "Silent Agent",
-    medium: "Visual System",
+    title: "Stealth Interface",
+    medium: "A minimal interaction layer that surfaces system intelligence only when required.It operates without disrupting user flow or operational context, remaining invisible during normal execution.Detection, logging, and alerting occur passively in the background, ensuring continuous oversight without user awareness or intervention.System responses are deferred, aggregated, and contextualized to avoid noise or false urgency.",
     description:
       "A minimal interface layer that surfaces system output without interrupting user flow or operational context.",
     span: "col-span-1 row-span-2",
   },
 ]
-
 
 export function WorkSection() {
   const sectionRef = useRef<HTMLElement>(null)
