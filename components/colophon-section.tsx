@@ -115,7 +115,7 @@ export function ColophonSection() {
           <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Location</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">Remote</li>
-            <li className="font-mono text-xs text-foreground/80">Everywhere</li>
+            <li className="font-mono text-xs text-foreground/80">Mathura, Uttar Pradesh</li>
           </ul>
         </div>
 
@@ -125,7 +125,7 @@ export function ColophonSection() {
           <ul className="space-y-2">
             <li>
               <a
-                href="mailto:hello@signal.studio"
+                href="mailto:daksh.pandey_cs23@gla.ac.in"
                 className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
               >
                 Email
@@ -133,10 +133,18 @@ export function ColophonSection() {
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/daksh-pandey-2000/"
                 className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
               >
-                Twitter/X
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/dakshpandey161"
+                className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
+              >
+                GitHub
               </a>
             </li>
           </ul>
@@ -146,8 +154,8 @@ export function ColophonSection() {
         <div className="col-span-1">
           <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Year</h4>
           <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">2025</li>
-            <li className="font-mono text-xs text-foreground/80">Ongoing</li>
+            <li className="font-mono text-xs text-foreground/80">3rd</li>
+            <li className="font-mono text-xs text-foreground/80">B.Tech(CS)</li>
           </ul>
         </div>
       </div>
