@@ -12,7 +12,7 @@ const signals = [
     date: "2025.05.28",
     title: "Dark Pattern Detection System",
     note: "Scalable crawler and classification system for detecting deceptive UI and text patterns across websites.",
-    href: "https://github.com/dakshpandey161/Dark-Pattern-Detector",
+    href: "https://github.com/dakshpandey161/DarkPatternDetector/blob/main/DarkPatternDetector-main/README.md",
   },
   {
     date: "2025.05.15",
