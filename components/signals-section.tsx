@@ -8,12 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const signals = [
-  //{
-    //date: "2025.06.10",
-    //title: "CodeNebula",
-    //note: "Real-time collaborative software systems development platform.",
-    //href: "https://github.com/dakshpandey161/CodeNebula",
-  //}
   {
     date: "2025.05.28",
     title: "Dark Pattern Detection System",
@@ -102,7 +96,7 @@ export function SignalsSection() {
         },
       )
 
-      const cards = cardsRef.current?.querySelectorAll("article")
+      const cards = cardsRef.current?.querySelectorAll("a")
       if (cards) {
         gsap.fromTo(
           cards,
@@ -165,13 +159,16 @@ function SignalCard({
   signal,
   index,
 }: {
-  signal: { date: string; title: string; note: string }
+  signal: { date: string; title: string; note: string; href?: string }
   index: number
 }) {
   return (
-    <article
+    <a
+      href={signal.href}
+      target="_blank"
+      rel="noopener noreferrer"
       className={cn(
-        "group relative flex-shrink-0 w-80",
+        "group relative flex-shrink-0 w-80 block cursor-pointer",
         "transition-transform duration-500 ease-out",
         "hover:-translate-y-2",
       )}
@@ -208,6 +205,6 @@ function SignalCard({
 
       {/* Shadow/depth layer */}
       <div className="absolute inset-0 -z-10 translate-x-1 translate-y-1 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-    </article>
+    </a>
   )
 }
