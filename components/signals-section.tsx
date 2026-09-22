@@ -8,30 +8,35 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const signals = [
-  {
-    date: "2025.06.10",
-    title: "CodeNebula",
-    note: "Real-time collaborative software systems development platform.",
-  },
+  //{
+    //date: "2025.06.10",
+    //title: "CodeNebula",
+    //note: "Real-time collaborative software systems development platform.",
+    //href: "https://github.com/dakshpandey161/CodeNebula",
+  //}
   {
     date: "2025.05.28",
     title: "Dark Pattern Detection System",
     note: "Scalable crawler and classification system for detecting deceptive UI and text patterns across websites.",
+    href: "https://github.com/dakshpandey161/Dark-Pattern-Detector",
   },
   {
     date: "2025.05.15",
     title: "ATM Simulation System",
     note: "The ATM Simulation System is a Java-based project designed to simulate the core functionalities of an ATM",
+    href: "https://github.com/dakshpandey161/Atm-Simulation-System-Main",
   },
   {
     date: "2025.04.30",
     title: "Heart Failure Detection System",
     note: "To predict the likelihood of heart failure in patients using machine learning algorithms.",
+    href: "https://github.com/dakshpandey161/heartfailurepredicton",
   },
   {
     date: "2025.04.12",
     title: "Prakriti Club Website",
     note: "Website for Prakriti Club, a nature enthusiasts' community at our college.",
+    href: "https://github.com/dakshpandey161/Prakriti-Club-Website",
   },
 ]
 
